@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Navigationsleiste */
+.navbar {
+    background-color: rgba(211, 211, 211, 0.8);
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 20;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #FF6347; /* Lachsfarbenes Orange */
+}
+
+
+
+.definitions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-sizing:content-box;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 60%;
+    border-radius: 15px;
+    /* Fügen Sie hier zusätzliche Stile für Bilder hinzu, wenn erforderlich */
+}
+
+/* Nur die Textboxen sollen den Hintergrund und den Border-Radius haben */
+.box:not(:empty):not(:has(img)) {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+}
+
+
+h2 {
+    color:#FF6347;
+    }
+    .sub_headline {
+        margin-left: 5%;
+    }
+
+.white-section {
+    margin-right: 5%;
+    margin-left: 5%;
+}
