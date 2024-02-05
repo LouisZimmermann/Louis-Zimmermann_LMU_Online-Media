@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Data</title>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="frontend.html">Frontend</a></li>
+            <li><a href="backend.html">Backend</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+        </ul>
+    </nav>
+
+    <section class="white-section">
+        <div class="container">
+            <h2>Javascript</h2>
+            <p>We have already briefly touched on the subject of Javascript. Here is a more precise definition: JavaScript is a versatile programming language commonly used for creating dynamic and interactive elements on websites. It allows developers to add functionality, manipulate the content of a webpage, and respond to user actions in real-time. JavaScript is primarily executed in web browsers, making it a crucial technology for enhancing the user experience by enabling features like form validation, animations, and interactive interfaces. It is a client-side scripting language, meaning it runs on the user's device rather than the server, facilitating the creation of dynamic and engaging web applications.
+            </p>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="container">
+            <h2>Example of an easy Javascript Element Integration:</h2>
+        </div>
+    </section>
+
+        <div id="quizContainer">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <button onclick="nextQuestion()">Next Question</button>
+        </div>
+        
+        <script>
+            const questions = [
+                {
+                    question: "What is the capital of France?",
+                    options: ["Marseille", "Berlin", "Paris", "Rome"],
+                    correctAnswer: "Paris"
+                },
+                {
+                    question: "Which of these is not a programming language?",
+                    options: ["Java", "Python", "Black Mamba", "C++"],
+                    correctAnswer: "Black Mamba"
+                },
+                {
+                    question: "How many planets does our solar system have?",
+                    options: ["7", "8", "9", "10"],
+                    correctAnswer: "8"
+                }
+            ];
+        
+            let currentQuestionIndex = 0;
+        
+            const questionElement = document.getElementById('question');
+            const optionsElement = document.getElementById('options');
+        
+            loadQuestion();
+        
+            function loadQuestion() {
+                const currentQuestion = questions[currentQuestionIndex];
+        
+                questionElement.textContent = currentQuestion.question;
+                optionsElement.innerHTML = "";
+        
+                currentQuestion.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.addEventListener('click', () => checkAnswer(option));
+                    optionsElement.appendChild(button);
+                });
+            }
+        
+            function checkAnswer(selectedOption) {
+                const currentQuestion = questions[currentQuestionIndex];
+        
+                if (selectedOption === currentQuestion.correctAnswer) {
+                    alert("Right!");
+                } else {
+                    alert("False. The right answer is: " + currentQuestion.correctAnswer);
+                }
+        
+                // Nächste Frage laden
+                nextQuestion();
+            }
+        
+            function nextQuestion() {
+                currentQuestionIndex++;
+        
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                } else {
+                    alert("Finished! You have anwered all questions.");
+                    resetQuiz();
+                }
+            }
+        
+            function resetQuiz() {
+                currentQuestionIndex = 0;
+                loadQuestion();
+            }
+        </script>
+        
+    
+
+</body>
+</html>
