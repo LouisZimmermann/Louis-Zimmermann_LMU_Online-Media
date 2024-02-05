@@ -1,6 +1,8 @@
+***Open the website by clicking the index.html file which is the main
+
 Hello and welcome. 
 I would like to tell you a bit more about my project and my website. 
-I would like to start with the homepage of my website. Right at the beginning, it should embody what I have learned during this seminar. I tried out various possibilities and tools with HTML and, for example, created my CV in the form of a table. To make the website more visually appealing, I also used many CSS tools. For example, the "Flexbox" to create more exciting layouts and to be able to arrange elements next to each other. A harmonious overall appearance was also achieved with CSS using a coordinated color palette and design language. 
+I would like to start with the homepage of my website (The index.html file is the homepage of the website, which is the best place to start). Right at the beginning, it should embody what I have learned during this seminar. I tried out various possibilities and tools with HTML and, for example, created my CV in the form of a table. To make the website more visually appealing, I also used many CSS tools. For example, the "Flexbox" to create more exciting layouts and to be able to arrange elements next to each other. A harmonious overall appearance was also achieved with CSS using a coordinated color palette and design language. 
 
 A navigation bar guides website visitors through several subpages that deal with various topics from the seminar. In order to ensure clarity, I decided to combine several classes on one sub-page each - organized according to the main topics.
 
