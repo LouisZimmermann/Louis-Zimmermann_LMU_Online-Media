@@ -1,4 +1,3 @@
-***Open the website by clicking the index.html file which is the main
 
 Hello and welcome. 
 I would like to tell you a bit more about my project and my website. 
